@@ -1,44 +1,46 @@
 import * as React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, ImageBackground} from 'react-native';
 import { FontAwesome } from 'react-native-vector-icons';
 import * as Font from 'expo-font';
-
-
-import { useEffect } from 'react';
+import profileBackground from './profBackground.gif';
 
 const ProfileScreen = () => {
     return (
+      <ImageBackground
+      source={profileBackground}
+      style={{ flex: 1, resizeMode: 'cover' }}
+    >
       <View style={backgroundStyles.container}>
         <Image
-            source={require('../../assets/headshot.png')}
-            style={infoStyles.profileImage}
+          source={require('../../assets/headshot.png')}
+          style={[infoStyles.profileImage, {marginTop: 8}]}
         />
         <Text style={infoStyles.name}>Joanne Lin</Text>
         <View style={infoStyles.info}>
-            <FontAwesome name="calendar" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
-            <Text style={infoStyles.info}>AGE: 18</Text>
+          <FontAwesome name="calendar" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
+          <Text style={infoStyles.info}>AGE: 18</Text>
         </View>
 
         <View style={infoStyles.info}>
-            <FontAwesome name="graduation-cap" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
-            <Text style={infoStyles.info}>MAJOR: DATA SCIENCE</Text>
+          <FontAwesome name="graduation-cap" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
+          <Text style={infoStyles.info}>MAJOR: DATA SCIENCE</Text>
         </View>
         <View style={infoStyles.info}>
-            <FontAwesome name="id-card" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
-            <Text style={infoStyles.info}>ID NUMBER: 2****08</Text>
+          <FontAwesome name="id-card" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
+          <Text style={infoStyles.info}>ID NUMBER: 2****08</Text>
         </View>
         <View style={infoStyles.info}>
-            <FontAwesome name="envelope" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
-            <Text style={infoStyles.info}>EMAIL: JLIN123@DEPAUL.EDU</Text>
+          <FontAwesome name="envelope" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
+          <Text style={infoStyles.info}>EMAIL: JLIN123@DEPAUL.EDU</Text>
         </View>
       </View>
+    </ImageBackground>
     );
   };
   
   const backgroundStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'pink',
       paddingTop: 15,
     },
     header: {
@@ -85,6 +87,7 @@ const ProfileScreen = () => {
         marginTop: 20,
         marginBottom: 10,
         alignSelf: 'center',
+        justifyContent: 'center',
       },
   });
 
