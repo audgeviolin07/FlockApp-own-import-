@@ -8,8 +8,8 @@ import * as Font from 'expo-font';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
 import { Image } from 'react-native';
-import background from './background.jpeg';
-
+import geoBack from './geoBack.png';
+import requestButton from './reqButton.png'
 
 export default function App() {
   
@@ -59,15 +59,23 @@ export default function App() {
  return (
    <View style={styles.container}>
      <Image
-          source={background}
-          style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, zIndex: -1 }}
+          source={geoBack}
+          style={{ width: '100%', height: '175%', position: 'absolute', top: -100, left: 0, bottom: 0, right: 0, zIndex: -1 }}
+
         />
+        
     
      <TextInput placeholder='WHERE AND WHERE ARE YOU GOING?' value={address} onChangeText={setAddress} style={styles.text}/>
      <Button title="How to start?" onPress={() => Alert.alert('Press the Send Location button to send your location')}/>
-     <Button title="Send Location" onPress={reverseGeocode} 
+     <Button title="Send Location" onPress={reverseGeocode} style={{ zIndex: 2 }}
      />
-   
+
+
+      <Image
+          source={requestButton}
+          style={{ width: '105%', height: '55%', position: 'absolute', top: 105, zIndex: -1 }}
+        />
+    
      <StatusBar style="auto" />
    </View>
  );
