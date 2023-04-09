@@ -56,7 +56,7 @@ export default function App() {
  return (
    <View style={styles.container}>
      <Image
-          source={{ uri: '/Users/adriannapinzariu/Documents/FlockApp/navigation/screen/_ (2).jpeg' }}
+          source={{ uri: '../screen/_ (2).jpeg' }}
           style={{ width: 400, height: 800 }}
         />
     

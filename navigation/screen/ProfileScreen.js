@@ -3,13 +3,14 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import { FontAwesome } from 'react-native-vector-icons';
 import * as Font from 'expo-font';
 
+
 import { useEffect } from 'react';
 
 const ProfileScreen = () => {
     return (
       <View style={backgroundStyles.container}>
         <Image
-            source={require('/Users/joannelin/FlockApp/headshot.png')}
+            source={require('../../assets/headshot.png')}
             style={infoStyles.profileImage}
         />
         <Text style={infoStyles.name}>Joanne Lin</Text>
@@ -90,10 +91,10 @@ const ProfileScreen = () => {
   
     const loadFontsAsync = async () => {
       await Font.loadAsync({
-        'Righteous-Regular': require('/Users/joannelin/FlockApp/assets/fonts/Righteous-Regular.ttf'),
-        'Nintendo': require('/Users/joannelin/FlockApp/assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
-        'superMario': require('/Users/joannelin/FlockApp/assets/fonts/SuperMarioBros-ov7d.ttf'),
-        'Pixel': require('/Users/joannelin/FlockApp/assets/fonts/Pixeled.ttf'),
+        'Righteous-Regular': require('../../assets/fonts/Righteous-Regular.ttf'),
+        'Nintendo': require('../../assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
+        'superMario': require('../../assets/fonts/SuperMarioBros-ov7d.ttf'),
+        'Pixel': require('../../assets/fonts/Pixeled.ttf'),
       });
     };
 
