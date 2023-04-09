@@ -5,18 +5,6 @@ import * as Font from 'expo-font';
 import MainContainer from './navigation/MainContainer';
 
 function App() {
-  // const [fontLoaded, setFontLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   async function loadFont() {
-  //     await Font.loadAsync({
-  //       'Arcade': require('/Users/joannelin/FitstProject/assets/fonts/ARCADECLASSIC.ttf'),
-  //     });
-  //     setFontLoaded(true);
-  //   }
-  //   loadFont();
-  // }, []);
-
   return (
     <MainContainer/>
   );
