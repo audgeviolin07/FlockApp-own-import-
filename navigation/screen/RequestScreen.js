@@ -5,11 +5,13 @@ import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
+import * as Font from 'expo-font';
 
 
 
 
 export default function App() {
+  
  const [location, setLocation] = useState();
  const [address, setAddress] = useState();
 
@@ -55,7 +57,7 @@ export default function App() {
 
  return (
    <View style={styles.container}>
-     <TextInput placeholder='Where are you going, and when?:' value={address} onChangeText={setAddress} />
+     <TextInput placeholder='Where are you going, and when?' value={address} onChangeText={setAddress} />
      <Button title="How to start?" onPress={() => Alert.alert('Press the Send Location button to send your location')} />
      <Button title="Send Location" onPress={reverseGeocode}
      />
@@ -71,7 +73,7 @@ export default function App() {
 const styles = StyleSheet.create({
  container: {
    flex: 1,
-   backgroundColor: '#fff',
+   backgroundColor: 'pink',
    alignItems: 'center',
    justifyContent: 'center',
  },
