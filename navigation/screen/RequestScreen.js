@@ -1,8 +1,10 @@
 
 import { StatusBar } from 'expo-status-bar';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
+import { FontAwesome } from 'react-native-vector-icons';
+import * as Font from 'expo-font';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
 import { Image } from 'react-native';
@@ -61,9 +63,9 @@ export default function App() {
           style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, zIndex: -1 }}
         />
     
-     <TextInput placeholder='Where are you going, and when?:' value={address} onChangeText={setAddress} />
-     <Button title="How to start?" onPress={() => Alert.alert('Press the Send Location button to send your location')} />
-     <Button title="Send Location" onPress={reverseGeocode}
+     <TextInput placeholder='WHERE AND WHERE ARE YOU GOING?' value={address} onChangeText={setAddress} style={styles.text}/>
+     <Button title="How to start?" onPress={() => Alert.alert('Press the Send Location button to send your location')}/>
+     <Button title="Send Location" onPress={reverseGeocode} 
      />
    
      <StatusBar style="auto" />
@@ -81,11 +83,21 @@ const styles = StyleSheet.create({
    justifyContent: 'center',
  },
  text: {
-  
    textAlign: 'center',
-  
-   color: 'black',
-   fontSize: 20,
-   fontFamily: 'IBM Plex Mono Bold',
+   fontSize: 10,
+   fontFamily: 'Pixel',
  },
 });
+
+
+const loadFontsAsync = async () => {
+  await Font.loadAsync({
+    'Righteous-Regular': require('../../assets/fonts/Righteous-Regular.ttf'),
+    'Nintendo': require('../../assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
+    'superMario': require('../../assets/fonts/SuperMarioBros-ov7d.ttf'),
+    'Pixel': require('../../assets/fonts/Pixeled.ttf'),
+  });
+};
+
+loadFontsAsync();
+
