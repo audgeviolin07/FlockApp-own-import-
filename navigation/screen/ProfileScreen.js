@@ -18,7 +18,7 @@ const ProfileScreen = () => {
         <Text style={infoStyles.name}>Joanne Lin</Text>
         <View style={infoStyles.info}>
           <FontAwesome name="calendar" size={24} color="rgb(103, 79, 110)" style={infoStyles.icon} />
-          <Text style={infoStyles.info}>AGE: 18</Text>
+          <Text style={infoStyles.info}>AGE: 3</Text>
         </View>
 
         <View style={infoStyles.info}>
@@ -92,16 +92,16 @@ const ProfileScreen = () => {
   });
 
   
-    const loadFontsAsync = async () => {
-      await Font.loadAsync({
-        'Righteous-Regular': require('../../assets/fonts/Righteous-Regular.ttf'),
-        'Nintendo': require('../../assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
-        'superMario': require('../../assets/fonts/SuperMarioBros-ov7d.ttf'),
-        'Pixel': require('../../assets/fonts/Pixeled.ttf'),
-      });
-    };
+  const loadFontsAsync = async () => {
+    await Font.loadAsync({
+      'Righteous-Regular': require('../../assets/fonts/Righteous-Regular.ttf'),
+      'Nintendo': require('../../assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
+      'superMario': require('../../assets/fonts/SuperMarioBros-ov7d.ttf'),
+      'Pixel': require('../../assets/fonts/Pixeled.ttf'),
+    });
+  };
 
-    loadFontsAsync();
+  loadFontsAsync();
 
 
   export default ProfileScreen;
