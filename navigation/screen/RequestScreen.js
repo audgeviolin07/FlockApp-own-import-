@@ -10,6 +10,9 @@ import React from 'react';
 import { Image } from 'react-native';
 import geoBack from './geoBack.png';
 import requestButton from './reqButton.png'
+import requestBubble from './requestBubble.png'
+import yes from './yes.png'
+import no from './no.png'
 
 export default function App() {
   
@@ -74,6 +77,19 @@ export default function App() {
       <Image
           source={requestButton}
           style={{ width: '105%', height: '55%', position: 'absolute', top: 105, zIndex: -1 }}
+        />
+
+      <Image
+          source={requestBubble}
+          style={{ width: '80%', height: '35%', position: 'absolute', top: 325, zIndex: -1 }}
+        />
+        <Image
+          source={yes}
+          style={{ width: '25%', height: '20%', position: 'absolute', left: 20, top: 450, zIndex: -1 }}
+        />
+        <Image
+          source={no}
+          style={{ width: '25%', height: '20%', position: 'absolute', right: 20, top: 450, zIndex: -1 }}
         />
     
      <StatusBar style="auto" />
