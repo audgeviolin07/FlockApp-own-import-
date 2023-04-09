@@ -76,20 +76,20 @@ export default function App() {
 
       <Image
           source={requestButton}
-          style={{ width: '105%', height: '55%', position: 'absolute', top: 105, zIndex: -1 }}
+          style={{ width: '100%', height: '45%', position: 'absolute', top: 148, zIndex: -1 }}
         />
 
       <Image
           source={requestBubble}
-          style={{ width: '80%', height: '35%', position: 'absolute', top: 325, zIndex: -1 }}
+          style={{ width: '75%', height: '27%', position: 'absolute', top: 415, zIndex: -1 }}
         />
         <Image
           source={yes}
-          style={{ width: '25%', height: '20%', position: 'absolute', left: 20, top: 450, zIndex: -1 }}
+          style={{ width: '25%', height: '20%', position: 'absolute', right: 20, top: 500, zIndex: -1 }}
         />
         <Image
           source={no}
-          style={{ width: '25%', height: '20%', position: 'absolute', right: 20, top: 450, zIndex: -1 }}
+          style={{ width: '25%', height: '20%', position: 'absolute', left: 20, top: 500, zIndex: -1 }}
         />
     
      <StatusBar style="auto" />
