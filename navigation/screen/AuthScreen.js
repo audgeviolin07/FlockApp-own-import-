@@ -1,6 +1,9 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, Image } from 'react-native';
+import { FontAwesome } from 'react-native-vector-icons';
+import * as Font from 'expo-font';
+import birdFlying from './bird-flying.gif'
 
 const AuthScreen = ({ onButtonClick }) => {
   const handlePress = () => {
@@ -9,10 +12,18 @@ const AuthScreen = ({ onButtonClick }) => {
 
 
   return (
-    <View style={{ paddingTop: 50 }}>
-      <Text>Welcome to the App!</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>FLOCK</Text>
+      <Text style={styles.text}>GO ANYWHERE SAFE</Text>
       <StatusBar style="auto" />
-      <Button title="Get Started" onPress={handlePress} />
+      
+      <Image
+          style={styles.image}
+          source={birdFlying}
+            
+          />
+      <StatusBar style="auto" />
+      <Button title="Get Started" onPress={handlePress}/>
     </View>
   );
 };
@@ -23,13 +34,32 @@ const styles = StyleSheet.create({
     backgroundColor: 'pink',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingBottom: 50
   },
   text: {
-    // fontFamily: 'Arcade',
-    fontSize: 24,
+    fontFamily: 'Pixel',
+    fontSize: 20,
     fontWeight: 'bold',
-    color: 'red',
+    color: 'purple',
   },
+  image: {
+    justifyContent: 'center',
+    width: 150, 
+    height: 150,
+    marginTop: 30,
+    marginBottom:70,
+  }
 });
+
+const loadFontsAsync = async () => {
+  await Font.loadAsync({
+    'Righteous-Regular': require('../../assets/fonts/Righteous-Regular.ttf'),
+    'Nintendo': require('../../assets/fonts/RoSpritendoSemiboldBeta-vmVwZ.otf'),
+    'superMario': require('../../assets/fonts/SuperMarioBros-ov7d.ttf'),
+    'Pixel': require('../../assets/fonts/Pixeled.ttf'),
+  });
+};
+
+loadFontsAsync();
 
 export default AuthScreen;
