@@ -41,7 +41,7 @@ const ProfileScreen = () => {
   const backgroundStyles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingTop: 15,
+      paddingTop: 35,
     },
     header: {
       
