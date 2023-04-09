@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { View, StyleSheet, Text, SafeAreaView, ImageBackground } from 'react-native';
-
+import {useState} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -10,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screen/HomeScreen';
 import RequestScreen from './screen/RequestScreen';
 import ProfileScreen from './screen/ProfileScreen';
+import AuthScreen from './screen/AuthScreen';
 
 //Screen Names
 const homeName = 'Home';
@@ -19,8 +18,14 @@ const profileName = 'Profile';
 const Tab = createBottomTabNavigator();
 
 export default function MainContainer() {
+  const [showMainContainer, setShowMainContainer] = useState(false);
+
+  const handleWelcomeButtonClick = () => {
+    setShowMainContainer(true);
+  };
   return (
     <NavigationContainer>
+    {showMainContainer ? (
       <Tab.Navigator
         initialRouteName={homeName}
         screenOptions={({route}) => ({
@@ -45,6 +50,9 @@ export default function MainContainer() {
         <Tab.Screen name = {profileName} component={ProfileScreen}/>
 
       </Tab.Navigator>
+    ) : (
+        <AuthScreen onButtonClick={handleWelcomeButtonClick} />
+      )}
     </NavigationContainer>
   );
 }

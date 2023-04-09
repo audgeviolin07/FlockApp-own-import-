@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
-import { SafeAreaView, Image, ImageBackground } from 'react-native';
+import { Image } from 'react-native';
 
 
 export default function App() {
+  
  const [location, setLocation] = useState();
  const [address, setAddress] = useState();
 
@@ -75,7 +76,7 @@ export default function App() {
 const styles = StyleSheet.create({
  container: {
    flex: 1,
-   backgroundColor: '#fff',
+   backgroundColor: 'pink',
    alignItems: 'center',
    justifyContent: 'center',
  },

@@ -1,4 +1,8 @@
 module.exports = {
-    assets: ['/Users/joannelin/FitstProject/assets/fonts/'],
+  project: {
+    ios: {},
+    android: {}
+  },
+    "assets": ["./assets/font",]
   };
   
