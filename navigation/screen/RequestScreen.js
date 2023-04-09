@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
-
-
+import { SafeAreaView, Image, ImageBackground } from 'react-native';
 
 
 export default function App() {
@@ -55,6 +54,11 @@ export default function App() {
 
  return (
    <View style={styles.container}>
+     <Image
+          source={{ uri: '/Users/adriannapinzariu/Documents/FlockApp/navigation/screen/_ (2).jpeg' }}
+          style={{ width: 400, height: 800 }}
+        />
+    
      <TextInput placeholder='Where are you going, and when?:' value={address} onChangeText={setAddress} />
      <Button title="How to start?" onPress={() => Alert.alert('Press the Send Location button to send your location')} />
      <Button title="Send Location" onPress={reverseGeocode}
