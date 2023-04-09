@@ -1,6 +1,6 @@
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 import {TextInput, Button, Alert} from 'react-native';
@@ -58,7 +58,7 @@ export default function App() {
    <View style={styles.container}>
      <Image
           source={background}
-          style={{ flex: 1 }}
+          style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, zIndex: -1 }}
         />
     
      <TextInput placeholder='Where are you going, and when?:' value={address} onChangeText={setAddress} />
@@ -76,13 +76,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
  container: {
-   flex: 1,
-   backgroundColor: 'pink',
+   flex: 0.75,
    alignItems: 'center',
    justifyContent: 'center',
  },
  text: {
+  
    textAlign: 'center',
+  
    color: 'black',
    fontSize: 20,
    fontFamily: 'IBM Plex Mono Bold',

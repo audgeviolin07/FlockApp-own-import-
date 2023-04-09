@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView, Image, ImageBackground } from 'react-native';
 import birdFlying from './bird-flying.gif'
-import pixelSpeech from './pixel-speech-bubble.png'
+import pixelBubble from './pixel-speech-bubble.png'
 import background from './background.jpeg'
 
 
@@ -11,10 +11,10 @@ export default function HomeScreen({}){
       <View style={styles.container}>
         <Image
           source={background}
-          style={{ width: 400, height: 800 }}
+          style={{ width: 400, height: 800}}
         />
         <Image
-        source={pixelSpeech}
+        source={pixelBubble}
         style={{ position: 'absolute', top: 75, width: 250, height: 155}}
       />
        <Image
