@@ -6,6 +6,7 @@ import * as Location from 'expo-location';
 import {TextInput, Button, Alert} from 'react-native';
 import React from 'react';
 import { Image } from 'react-native';
+import background from './background.jpeg';
 
 
 export default function App() {
@@ -56,8 +57,8 @@ export default function App() {
  return (
    <View style={styles.container}>
      <Image
-          source={{ uri: '../screen/_ (2).jpeg' }}
-          style={{ width: 400, height: 800 }}
+          source={background}
+          style={{ flex: 1 }}
         />
     
      <TextInput placeholder='Where are you going, and when?:' value={address} onChangeText={setAddress} />

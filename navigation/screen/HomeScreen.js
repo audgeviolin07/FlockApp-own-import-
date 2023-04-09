@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView, Image, ImageBackground } from 'react-native';
-import birdFlying from '/Users/adriannapinzariu/Documents/FlockApp/navigation/screen/bird-flying.gif'
+import birdFlying from './bird-flying.gif'
+import pixelSpeech from './pixel-speech-bubble.png'
+import background from './background.jpeg'
 
 
 export default function HomeScreen({}){
   return (
       <View style={styles.container}>
         <Image
-          source={{ uri: '/Users/adriannapinzariu/Documents/FlockApp/navigation/screen/_ (2).jpeg' }}
+          source={background}
           style={{ width: 400, height: 800 }}
         />
         <Image
-        source={{ uri: '/Users/adriannapinzariu/Documents/FlockApp/navigation/screen/pixel-speech-bubble (5).png' }}
+        source={pixelSpeech}
         style={{ position: 'absolute', top: 75, width: 250, height: 155}}
       />
        <Image
